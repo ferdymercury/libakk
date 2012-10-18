@@ -1,0 +1,30 @@
+*********************************************************
+*		"Akk Calculator"                        *
+* Copyright 2012 CERN, João Guilherme Martins Correia & *
+* Marcelo Baptista Barbosa                              *
+*                                                       *
+* DO NOT CHANGE THE FORMAT OF THE FILE OR IT WON'T WORK *
+********************************************************#
+
+3.5	! Ji - initial state spin #
+2.5	! J - intermediate state spin #
+0.5	! Jf - final state spin #
+
+-0.144	! delta (gamma_1) #
+0.0	! delta (gamma_2) #
+
+
+-----------------------------------------------------------
+ Only for electron conversion - gamma angular correlations
+ 	(otherwise leave all values equal to 1.0)
+-----------------------------------------------------------
+
+! Particle Parameters 1 #
+1.0	1.0		! alpha(L) alpha(L') #
+1.0	1.0	1.0	! B2(11) B2(12) B2(22) #
+1.0	1.0	1.0	! B4(11) B4(12) B4(22) #
+
+! Particle Parameters 2 #
+1.0	1.0		! alpha(L) alpha(L') #
+1.0	1.0	1.0	! B2(11) B2(12) B2(22) #
+1.0	1.0	1.0	! B4(11) B4(12) B4(22) #
