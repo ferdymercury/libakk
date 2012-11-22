@@ -1,5 +1,7 @@
 TEMPLATE = lib
 
+VERSION = 2.0.0
+
 QT -= core gui
 
 TARGET = akk
