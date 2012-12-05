@@ -78,7 +78,7 @@ public:
           a42(0.0),
           a42Uncert(0.0),
           a44(0.0),
-          a44Uncert(0.0),
+          a44Uncert(0.0)
     {
     }
 
