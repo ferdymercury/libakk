@@ -24,3 +24,7 @@ unix {
     target.path = $$PREFIX/lib/
     INSTALLS += headers target
 }
+
+win32-msvc* {
+    CONFIG += static exceptions
+}
