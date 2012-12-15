@@ -28,3 +28,9 @@ unix {
 win32-msvc* {
     CONFIG += static exceptions
 }
+
+mac {
+    CONFIG += ppc x86
+    LIBS += -L/opt/local/lib/
+}
+
