@@ -95,13 +95,14 @@ public:
         double a4gamma1Uncert = 0.0;
         double a4gamma1 = calculateComponent(4, dbl_ji, dbl_j, firstAl1, firstAl, firstB411, firstB412, firstB422, d1, d1Uncert, &a4gamma1Uncert);
 
+        // using negative delta value for second gamma value according to Krane/Steffen 1970
         //  A2 (gamma 2)
         double a2gamma2Uncert = 0.0;
-        double a2gamma2 = calculateComponent(2, dbl_jf, dbl_j, secondAl1, secondAl, secondB211, secondB212, secondB222, d2, d2Uncert, &a2gamma2Uncert);
+        double a2gamma2 = calculateComponent(2, dbl_jf, dbl_j, secondAl1, secondAl, secondB211, secondB212, secondB222, -d2, d2Uncert, &a2gamma2Uncert);
 
         //  A4 (gamma 2)
         double a4gamma2Uncert = 0.0;
-        double a4gamma2 = calculateComponent(4, dbl_jf, dbl_j, secondAl1, secondAl, secondB411, secondB412, secondB422, d2, d2Uncert, &a4gamma2Uncert);
+        double a4gamma2 = calculateComponent(4, dbl_jf, dbl_j, secondAl1, secondAl, secondB411, secondB412, secondB422, -d2, d2Uncert, &a4gamma2Uncert);
 
         a22 = a2gamma1*a2gamma2;
         a22Uncert = std::sqrt(a2gamma1*a2gamma1 * a2gamma2Uncert*a2gamma2Uncert + a2gamma2*a2gamma2 * a2gamma1Uncert*a2gamma1Uncert);
