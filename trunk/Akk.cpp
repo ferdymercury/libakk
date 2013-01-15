@@ -130,15 +130,17 @@ public:
         const double de = sqrt(Al1/Al)*delta;
         const double deUc = sqrt(Al1/Al)*deltaUncertainty;
 
-        const double f11 = Bx11*(((jx_2+j_2)/2+1)%2 ? -1 : 1)*sqrt((lx_2+1.)*(lx_2+1.)*(2*k+1.)*(j_2+1.))
+        const int sign = ((jx_2+j_2)/2+1)%2 ? -1 : 1; // equivalent to pow(-1., jx_2/2.+j_2/2.+1.)
+
+        const double f11 = Bx11*sign*sqrt((lx_2+1.)*(lx_2+1.)*(2*k+1.)*(j_2+1.))
         *gsl_sf_coupling_3j(lx_2, lx_2, 2*k, 2, -2, 0.)
         *gsl_sf_coupling_6j(j_2, j_2, 2*k, lx_2, lx_2, jx_2);
 
-        const double f12 = Bx12*(((jx_2+j_2)+1)%2 ? -1 : 1)*sqrt((lx_2+1.)*(lxPlusOne_2+1.)*(2*k+1.)*(j_2+1.))
+        const double f12 = Bx12*sign*sqrt((lx_2+1.)*(lxPlusOne_2+1.)*(2*k+1.)*(j_2+1.))
         *gsl_sf_coupling_3j(lx_2, lxPlusOne_2, 2*k, 2, -2, 0.)
         *gsl_sf_coupling_6j(j_2, j_2, 2*k, lx_2, lxPlusOne_2, jx_2);
 
-        const double f22 = Bx22*(((jx_2+j_2)+1)%2 ? -1 : 1)*sqrt((lxPlusOne_2+1.)*(lxPlusOne_2+1.)*(2*k+1.)*(j_2+1.))
+        const double f22 = Bx22*sign*sqrt((lxPlusOne_2+1.)*(lxPlusOne_2+1.)*(2*k+1.)*(j_2+1.))
         *gsl_sf_coupling_3j(lxPlusOne_2, lxPlusOne_2, 2*k, 2, -2, 0.)
         *gsl_sf_coupling_6j(j_2, j_2, 2*k, lxPlusOne_2, lxPlusOne_2, jx_2);
 
