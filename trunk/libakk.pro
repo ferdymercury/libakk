@@ -27,8 +27,9 @@ unix {
 
 win32-msvc* {
     CONFIG += static exceptions
-    LIBS += -L../gsl-1.14-msvc/lib -lgslcblas
-    INCLUDEPATH += ../gsl-1.14-msvc/include}
+    LIBS += ../gsl-1.15-msvc/_build-msvc/libcblas/libcblas.lib ../gsl-1.15-msvc/_build-msvc/libgsl/libgsl.lib
+    INCLUDEPATH += ../gsl-1.15-msvc
+}
 
 mac {
     CONFIG += ppc x86
