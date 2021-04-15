@@ -13,7 +13,7 @@ SOURCES += Akk.cpp
 HEADERS += Akk.h\
            akk_global.h
 
-LIBS += -lgsl
+LIBS += -lgsl -lgslcblas
 
 unix {
     isEmpty(PREFIX) {
